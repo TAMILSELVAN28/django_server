@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'django_server.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        "HOST": "localhost",
-        'NAME': "cinemas",
-        "USER": "zoomrx",
-        "PASSWORD": "",
+        "HOST": os.environ.get('mysql_host'),
+        'NAME': os.environ.get('mysql_db'),
+        "USER": os.environ.get('mysql_user'),
+        "PASSWORD": os.environ.get('mysql_password'),
         "TEST": {
             "NAME":"cinemas_test"
         }
