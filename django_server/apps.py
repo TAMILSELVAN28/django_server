@@ -1,0 +1,1 @@
+from movie_collections.apps import MovieCollectionsConfig
